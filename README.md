@@ -1,9 +1,9 @@
-# Shhhloader
-Shhhloader is a SysWhispers Shellcode Loader that is currently a Work in Progress. It takes raw shellcode as input and compiles a C++ stub that has been integrated with SysWhispers in order to bypass AV/EDR. The included python builder will work on any Linux system that has Mingw-w64 installed. 
+# SyS Whispers
+SHloader is a SysWhispers Shellcode Loader that is currently a Work in Progress. It takes raw shellcode as input and compiles a C++ stub that has been integrated with SysWhispers in order to bypass AV/EDR. The included python builder will work on any Linux system that has Mingw-w64 installed. 
 
 The tool has been confirmed to successfully load Meterpreter and a Cobalt Strike beacon on fully updated systems with Windows Defender enabled. The project itself is still in a PoC/WIP state, as it currently doesn't work with all payloads.
 
-**2/9/22 EDIT: Shhhloader now includes 5 different ways to execute your shellcode! See below for updated usage. Big thanks to [@Snovvcrash](https://github.com/snovvcrash) and their [DInjector](https://github.com/snovvcrash/DInjector) project for inspiration! I highly recommend taking a look at it for more information regarding the shellcode injection techniques and code that this tool is now based on.**
+**2/9/22 EDIT: SHloader now includes 5 different ways to execute your shellcode! See below for updated usage. Big thanks to [T.me/TigerMatee](https://github.com/snovvcrash) and their [DInjector](https://github.com/snovvcrash/DInjector) project for inspiration! I highly recommend taking a look at it for more information regarding the shellcode injection techniques and code that this tool is now based on.**
 
 ```
 ┳┻|
@@ -53,11 +53,3 @@ Tested and Confirmed Working on:
 Scan Results as of 2/9/22 (x64 Meterpreter QueueUserAPC): https://antiscan.me/scan/new/result?id=tntuLnCkTCwz
 
 ![Scan](https://antiscan.me/images/result/tntuLnCkTCwz.png)
-
-Greetz & Credit:
-* Jthuraisamy for his amazing project SysWhispers: https://github.com/jthuraisamy/SysWhispers
-* OutFlank for creating InlineWhispers (Mingw-w64 Compatible SysWhispers): https://github.com/outflanknl/InlineWhispers
-* FalconForceTeam for their syscall generation tool that supports SysWhispers2: https://github.com/FalconForceTeam/SysWhispers2BOF
-* Snovvcrash for their NimHollow project, which I used as a template for process hollowing: https://github.com/snovvcrash/NimHollow
-* Snovvcrash again for their DInjector project, which I used as a template for many of the included injection techniques: https://github.com/snovvcrash/DInjector
-* Cerbersec for their Ares project, whose code I used for PPID Spoofing, Blocking 3rd Party DLLs and Sandbox Evasion: https://github.com/Cerbersec/Ares
